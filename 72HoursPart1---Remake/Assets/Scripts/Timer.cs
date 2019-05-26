@@ -10,7 +10,7 @@ using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour {
 
     float currentTime = 0f;
-    float startingTime = 10f;
+    float startingTime = 90f;
 
     public Text TimerText;
 
