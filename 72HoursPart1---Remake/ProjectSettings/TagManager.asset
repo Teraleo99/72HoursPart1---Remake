@@ -41,9 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: tiles
+  - name: Tiles
     uniqueID: 4281360933
     locked: 0
-  - name: player + colliders
+  - name: Player + Objects
     uniqueID: 2147227347
+    locked: 0
+  - name: UI
+    uniqueID: 3411776673
     locked: 0
