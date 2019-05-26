@@ -6,19 +6,23 @@ public class Player : MonoBehaviour
 {
 
     // designer variables
-    public float speed = 10;
+    public float speed = 7;
     public Rigidbody2D physicsBody;
     public string horizontalAxis = "Horizontal";
     public string verticalAxis = "Vertical";
+
     //In the editor, add your wayPoint gameobject to the script.
     public GameObject wayPoint;
-    //This is how often your waypoint's position will update to the player's position
+
+    //This is how often the waypoint's position will update to the player's position
     private float timer = 0.5f;
+
+    private Animator anim; 
 
     // Use this for initialization
     void Start()
     {
-
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -52,6 +56,9 @@ public class Player : MonoBehaviour
             UpdatePosition();
             timer = 0.5f;
         }
+
+        anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));
+        anim.SetFloat("MoveY", Input.GetAxisRaw("Vertical"));
 
     }
 
