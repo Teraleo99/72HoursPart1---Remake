@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
+
         //At the start of the game, the zombies will find the gameobject called wayPoint.
         wayPoint = GameObject.Find("wayPoint");
 

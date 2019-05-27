@@ -19,10 +19,10 @@ public class OpenBarricade : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        // Check if the thing we bumped into is an enemy
+        // Check if it's the player 
         if (collision.collider.GetComponent<Player>())
         {
-            // die
+            // Set bool to true so wall disappears 
             CannonFired = true;
         }
     }

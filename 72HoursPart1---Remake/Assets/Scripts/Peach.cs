@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Coin : MonoBehaviour
+public class Peach : MonoBehaviour
 {
 
     //variable to let us add to score, public so we can drag and drop
     public Score scoreObject;
 
     //variable to hold coins point value, public so we can change in the editor
-    public int coinValue;
+    public int PeachValue;
 
     // Use this for initialization
     void Start()
@@ -34,7 +34,7 @@ public class Coin : MonoBehaviour
         {
             //we hit the player!
             //add score based on value
-            scoreObject.AddScore(coinValue);
+            scoreObject.AddScore(PeachValue);
             //kill gameObject that script is attached to 
             Destroy(gameObject);
         }
