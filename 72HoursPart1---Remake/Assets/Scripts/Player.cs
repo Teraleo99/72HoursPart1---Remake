@@ -77,7 +77,13 @@ public class Player : MonoBehaviour
             // die
             Destroy(gameObject);
         }
+        if (collision.collider.GetComponent<LabEnemy>())
+        {
+            Destroy(gameObject);
+        }
     }
+
+
 
 
 }
