@@ -6,14 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class StartButton : MonoBehaviour
 {
+    public string sceneToLoad;
 
     public void StartGame()
     {
         //Reset the score
-        PlayerPrefs.DeleteKey("score");
+        PlayerPrefs.DeleteKey("Score");
 
         //Load first level
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene(sceneToLoad);
     }
 
 }
