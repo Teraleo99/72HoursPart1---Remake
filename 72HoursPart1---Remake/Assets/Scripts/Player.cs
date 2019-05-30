@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.SceneManagement;
+
 public class Player : MonoBehaviour
 {
 
@@ -76,10 +78,7 @@ public class Player : MonoBehaviour
         {
             // die
             Destroy(gameObject);
-        }
-        if (collision.collider.GetComponent<LabEnemy>())
-        {
-            Destroy(gameObject);
+            SceneManager.LoadScene("GameOver");
         }
     }
 
